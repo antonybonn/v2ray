@@ -37,7 +37,7 @@ sudo mkdir -p /usr/local/etc/v2ray
 
 echo "$CONFIG" | sudo tee /usr/local/etc/v2ray/config.json > /dev/null
 
-
+sudo systemctl enable v2ray
 sudo systemctl start v2ray
 wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh && chmod +x bbr.sh && sudo ./bbr.sh
 sudo systemctl restart v2ray
